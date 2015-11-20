@@ -23,7 +23,7 @@ public class Main {
         while (in.hasNextLine()) {
             String line = in.nextLine();
             for (int i = 0; i < line.length(); i++) {
-                if (line.charAt(i) != ' ' && line.charAt(i) != '\n' && line.charAt(i) != '\t')
+                if (line.charAt(i) != ' ' && line.charAt(i) != '\n' &&  line.charAt(i) != '\t' && e line.charAt(i) != '\r')
                     znaki++;
                 else
                     bznaki++;

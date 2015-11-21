@@ -16,14 +16,14 @@ public class Main {
         File file = new File(inputFile);
         Scanner in = new Scanner(file);
 
-
         int slowa = 0;
         int bznaki = 0;
         int znaki= 0;
+        int[] tab=new int[3];
         while (in.hasNextLine()) {
             String line = in.nextLine();
             for (int i = 0; i < line.length(); i++) {
-                if (line.charAt(i) != ' ' && line.charAt(i) != '\n' &&  line.charAt(i) != '\t' && e line.charAt(i) != '\r')
+                if (line.charAt(i) != ' ' && line.charAt(i) != '\n' &&  line.charAt(i) != '\t' && line.charAt(i) != '\r')
                     znaki++;
                 else
                     bznaki++;
@@ -31,8 +31,11 @@ public class Main {
             slowa += new StringTokenizer(line, " ,").countTokens();
         }
         in.close();
-        System.out.println("Biale znaki = " + bznaki);
-        System.out.println("Slowa = " + slowa);
-        System.out.println("Znaki = " + znaki);
+        tab[0]=bznaki;
+        tab[1]=slowa;
+        tab[2]=znaki;
+        System.out.println("Biale znaki = " + tab[0]);
+        System.out.println("Slowa = " + tab[1]);
+        System.out.println("Znaki = " + tab[2]);
     }
 }
